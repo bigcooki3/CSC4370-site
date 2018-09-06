@@ -98,7 +98,7 @@ span {
 }
 
 #home {
-	background-image: url("../img/bg.gif");
+	background-image: url("./img/bg.gif");
 	background-repeat: repeat;
 	background-attachment: fixed;
 	min-height: 100vh;
