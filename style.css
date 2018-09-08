@@ -50,6 +50,7 @@ table {
 	align-items: center;
 	width: 80%;
 	border-collapse: collapse;
+	table-layout: fixed;
 }
 
 tr {
