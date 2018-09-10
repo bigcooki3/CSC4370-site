@@ -19,6 +19,11 @@ body, html {
 
 a {
     color: white;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
 }
 
 a:hover {
@@ -39,7 +44,6 @@ a:hover {
 }
 
 .pair {
-    padding: 5px;
     display: inline-block;
     align-items: center;
 }
@@ -103,7 +107,7 @@ a:hover {
 }
 
 #navbar ul {
-    max-width: 894px;
+    max-width: 874px;
     margin: 0 auto;
     list-style-type: none;
     list-style-position: inside;
