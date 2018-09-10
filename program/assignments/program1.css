@@ -1,0 +1,147 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+@import url('https://fonts.googleapis.com/css?family=Lora');
+
+/* CSS Document */
+
+/* Base Styling */
+
+* {
+	margin: 0;
+	padding: 0;
+    border: none;
+    outline: 0;
+}
+
+body, html {
+	width: 100%;
+	font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
+}
+
+#home h1 {
+    font-family: 'Lora', 'Times New Roman', Times, serif;
+}
+
+#navbar ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: gold;
+}
+
+#navbar li{
+    float: left;
+}
+
+#navbar a {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
+
+#home {
+    background-color: #efefef;
+    min-height: 100vh;
+}
+
+.container {
+    padding: 20px;
+}
+
+/* Recipe Styling  */
+
+#recipe {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+    background-color: #FFCC00;
+    text-align: center;
+}
+
+#recipe h1 {
+    font-size: 2em;
+}
+
+#recipe .body li {
+    list-style-position: inside;
+    padding: 0;
+    margin-left: 30px;
+}
+
+#recipe table {
+    color: white;
+    background-color: #CC9933;
+    border: 2px solid white;
+    border-collapse: collapse;
+    line-height: 1.5em;
+}
+
+#recipe th {
+    background-color: #003366;
+    border: 2px solid white;
+    text-align: center;
+}
+
+#recipe td {
+    border: 2px solid white;
+}
+
+#recipe .body table * {
+    padding: 0;
+}
+
+#recipe #nutrients {
+    width: 800px;
+}
+
+#recipe #rating {
+    width: 600px;
+}
+
+#recipe caption {
+    background-color: #F0F0F0;
+    color: #A4A400;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+#recipe .header {
+    text-align: center;
+    background-color: #F0F0F0;
+    font-family: 'Century Gothic', Arial, Helvetica, sans-serif;
+    color: #A4A400;
+    margin: 5px 0;
+}
+
+#recipe .body * {
+    padding: 10px 0;
+}
+
+#recipe .body span {
+    font-weight: normal;
+}
+
+#recipe .container {
+    margin: 0 auto;
+    max-width: 1170px;
+    text-align: left;
+}
+
+#recipe #navbar ul{
+    background: none;
+    padding: 10px 50px;
+}
+
+#recipe #navbar li{
+    line-height: 12px;
+    background-color: #ffe680;
+    padding: 0 20px;
+    margin: 0 5px;
+    border-right: solid 20px #003366;
+}
+
+#recipe #navbar li a{
+    color: #003366;
+    text-decoration: none;
+}
