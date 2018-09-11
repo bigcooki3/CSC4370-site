@@ -27,7 +27,7 @@ a {
 }
 
 a:hover {
-    color: red;
+    color: lightblue;
 }
 
 /* CLASS STYLES  */
@@ -55,7 +55,7 @@ a:hover {
     display: inline-block;
     width: 200px;
     min-height: 270px;
-    background: brown;
+    background-color: #A57548;
 }
 
 .card img {
@@ -81,7 +81,7 @@ a:hover {
 }
 
 .tags a:hover {
-    border-color: red;
+    border-color: lightblue;
 }
 
 .col-wide {
@@ -94,16 +94,12 @@ a:hover {
 /* Navbar Styling  */
 
 #navbar {
-    background-color: #339999;
+    background-color: teal;
     line-height: 40px;
 }
 
 #navbar a {
     text-decoration: none;
-}
-
-#navbar a:hover {
-    color: pink;
 }
 
 #navbar ul {
@@ -159,5 +155,5 @@ a:hover {
 #main {
     padding: 20px 0;                    
     text-align: center;
-    background-color: pink;
+    background-color: blanchedalmond;
 }
