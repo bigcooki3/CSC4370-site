@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Kosugi+Maru');
+
+h1 {
+    color: cyan;
+}
+
+#quote {
+    font-style: italic;
+}
+
+a {
+    color: cyan;
+}
+
+#home {
+    background-color: navy;
+    font-family: 'Kosugi Maru', Arial, Helvetica, sans-serif;
+}

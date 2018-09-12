@@ -1,0 +1,159 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Arimo');
+
+/* CSS Document */
+
+/* ELEMENT STYLES */
+
+* {
+	margin: 0;
+	padding: 0;
+    border: none;
+    outline: 0;
+}
+
+body, html {
+	width: 100%;
+	font-family: 'Arimo', Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: white;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+}
+
+a:hover {
+    color: lightblue;
+}
+
+/* CLASS STYLES  */
+
+.container {
+    margin: 0 auto;
+    display: inline-block;    
+    vertical-align: top;    
+    background-color: burlywood;
+}
+
+.row {
+    padding: 10px;
+}
+
+.pair {
+    display: inline-block;
+    align-items: center;
+}
+
+.card {
+    margin: 5px;
+    vertical-align: top;
+    color: white;
+    display: inline-block;
+    width: 200px;
+    min-height: 270px;
+    background-color: #A57548;
+}
+
+.card img {
+    width: 180px;
+    height: 180px;
+    padding: 10px 10px 0 10px;
+    object-fit: cover;
+}
+
+.card h4 {
+    padding-bottom: 5px;
+}
+
+.tags {
+    line-height: 40px;
+}
+
+.tags a {
+    border: 1px solid white;
+    border-radius: 25px;
+    padding: 5px 10px;
+    margin-right: 5px;  
+}
+
+.tags a:hover {
+    border-color: lightblue;
+}
+
+.col-wide {
+    margin: auto 0;
+    padding: 10px 0;
+}
+
+/* SECTION STYLES */
+
+/* Navbar Styling  */
+
+#navbar {
+    background-color: teal;
+    line-height: 40px;
+}
+
+#navbar a {
+    text-decoration: none;
+}
+
+#navbar ul {
+    max-width: 874px;
+    margin: 0 auto;
+    list-style-type: none;
+    list-style-position: inside;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+}
+
+#navbar li {
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 20px;
+    height: 100%;
+}
+
+#navbar #logo img {
+    vertical-align: middle;
+    height: 40px;
+}
+
+#navbar #search {
+    padding-left: 30px;
+    padding-right: 0;
+    float: right;
+    background-image: url(./img/search.png);
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 0 50%; 
+}
+
+#welcome {
+    max-width: 848px;
+    margin: 0 auto;
+    text-align: left;
+    display: flex;
+    color: white;
+}
+
+#welcome img {
+    max-height: 100px;
+    padding: 5px;
+}
+
+#welcome div {
+    padding-left: 20px;
+}
+
+
+#main {
+    padding: 20px 0;                    
+    text-align: center;
+    background-color: blanchedalmond;
+}
