@@ -13,11 +13,11 @@
 
 body, html {
 	width: 100%;
-	font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
+	font-family: 'Bookman Old Style', Arial, Helvetica, sans-serif;
 }
 
 #home h1 {
-    font-family: 'Lora', 'Times New Roman', Times, serif;
+    font-family: 'Bookman Old Style', 'Times New Roman', Times, serif;
     padding: 10px 0;
 }
 
