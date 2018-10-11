@@ -97,6 +97,15 @@ input[type=reset]:hover {
 	text-align: center;
 }
 
+#home {
+	float: left;
+	padding: 5px;
+	margin: 30px;
+	margin-top: 0px;
+	border: 2px solid white;
+	border-radius: 40px;
+}
+
 table {
 	text-align: left;
 	width: fit-content;

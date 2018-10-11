@@ -8,6 +8,7 @@
 </head>
 
 <body>
+<a id="home" href="../../../index.html"><img src="./home.png"></a>
 
 <div id="problem1" class="box">
     <div class="boxhead">
@@ -23,7 +24,7 @@
                 <option>Kosugi</option>
                 <option>Arbutus</option>
             </select>
-            <input type="Submit" value="Submit"><input type="Reset" value="Reset">
+            <input type="Submit" value="Submit">
         </div>
         <textarea name="text" rows="7" cols="60">
             ASIANS CAN ACTUALLY READ MINDS!!!!!!!!!!!! they can hear, and see what your visually thinking. this is the complete truth. The reason a lot of Asians have completely expressionless faces, segregate from everybody else-only associate with Asians and don't associate with non Asians that much, and are very unfriendly in general is to avoid accidentally revealing that they can read minds. If all over a billion Asians where to show facial expressions all the time just as much as non Asians, integrate and associate with non Asians much more, and be much more friendly and talkative, then a lot of them might accidentally reveal that they can read minds by accidentally showing a facial expression or dirty look when someone thinks, or visually pictures something in their mind they don't like, find astonishing, or funny etc because those people might see that and and really wonder what that was that just happened there and see the connection, and they might accidentally say something similar to what the person was just thinking and going to say. If they all associated with non Asians a lot more then there would be a lot more people around for them to accidentally show facial expressions when those people think things they don't like etc, so they segregate and only associate with Asians so there won't be anyone around for them to see that and have any accidents happen in the first place.
