@@ -2,29 +2,34 @@
     function action($type) {
         // Use probability to return character action
         $rand_int = rand(1, 100);
-        if($type == "enemy") {
-            switch ($rand_int) {
-                case in_array($rand_int,range(1, 30)): 
-                    return "atk";
-                case in_array($rand_int,range(31, 50)): 
-                    return "mgc";
-                case in_array($rand_int,range(61, 80)):
-                    return "def";
-                case in_array($rand_int,range(51, 60)):
-                    return "heal";
-                default: 
-                    return "idle";
+        if (!($enemy_dead || $dead)) {
+            if($type == "enemy") {
+                switch ($rand_int) {
+                    case in_array($rand_int,range(1, 30)): 
+                        return "atk";
+                    case in_array($rand_int,range(31, 50)): 
+                        return "mgc";
+                    case in_array($rand_int,range(61, 80)):
+                        return "def";
+                    case in_array($rand_int,range(51, 60)):
+                        return "heal";
+                    default: 
+                        return "idle";
+                }
+            }
+            else if($type == "asst") {
+                switch ($rand_int) {
+                    case in_array($rand_int,range(1, 10)): 
+                        return "heal";
+                    case in_array($rand_int,range(11, 30)): 
+                        return "atk";
+                    default: 
+                        return "idle";
+                }
             }
         }
-        else if($type == "asst") {
-            switch ($rand_int) {
-                case in_array($rand_int,range(1, 10)): 
-                    return "heal";
-                case in_array($rand_int,range(11, 30)): 
-                    return "atk";
-                default: 
-                    return "idle";
-            }
+        else {
+            return "";
         }
     }
     function print_action($actor, $action, $target = "", $damage = -1) {
@@ -160,11 +165,11 @@
         $health_enemy--;
     }
 
-    if ($health <= 0) {
-        $dead = true;
-    }
     if ($health_enemy <= 0) {
         $enemy_dead = true;
+    }
+    if ($health <= 0) {
+        $dead = true;
     }
 ?>
 
@@ -213,13 +218,13 @@
                     foreach($msgs as $msg) {
                         echo $msg;
                     }
-                    if ($dead) {
-                        echo $user." died. <br />GAME OVER! ";
-                        echo "<a href=\"index.php\">Click here to try again?</a>";
-                    }
-                    else if ($enemy_dead) {
+                    if ($enemy_dead) {
                         echo $user." defeated ".$enemy.". <br />You win! <br />";
                         echo "<a href=\"victory.php?name=".$user."\">Click here to visit the leaderboards!</a>";
+                    }
+                    else if ($dead) {
+                        echo $user." died. <br />GAME OVER! ";
+                        echo "<a href=\"index.php\">Click here to try again?</a>";
                     }
                 ?>
             </div>
