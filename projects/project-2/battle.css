@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css?family=Concert+One');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Concert One';
+}
+
+#main {
+    background-image: url('./img/background.png');
+}
+
+#graphics {
+    width: 100vw;
+    height: 70vh;
+}
+
+#left {
+    padding-top: 300px;
+    max-width: 90%;
+    margin-left: auto;
+}
+
+#left img {
+    margin-left: 55px;
+}
+
+#right {
+    max-width: 30%;
+    margin-left: auto;
+}
+
+.characters {
+    float: left;
+}
+
+#user {
+    width: 100px;
+}
+
+#action-user {
+    width: 80px;
+    display: block;
+}
+
+#name-user {
+    padding-left: 70px;
+}
+
+#asst {
+    width: 75px;
+    margin-left: 55px;
+}
+
+#action-asst {
+    width: 55px;
+    display: block;
+}
+
+#name-asst {
+    padding-left: 35px;
+}
+
+#health {
+    font-size: 17pt;
+    text-align: center;
+    margin-left: 65px;
+    width: 60px;
+    background-image: url('./img/health.png');
+    background-size: 23px;
+    background-repeat: no-repeat;
+}
+
+#enemy {
+    width: 175px;
+}
+
+#action-enemy {
+    width: 80px;
+    display: block;
+}
+
+#health-enemy {
+    font-size: 17pt;
+    text-align: center;
+    margin-left: 35px;
+    width: 65px;
+    background-image: url('./img/health.png');
+    background-size: 23px;
+    background-repeat: no-repeat;
+}
+
+#name-enemy {
+    padding-left: 40px;
+}
+
+#battle {
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#battle > div {
+    margin: auto;
+    background-color: rgba(242, 218, 175, 0.8);
+    box-shadow: 1px 1px 20px black;
+    border: 0px;
+    border-radius: 25px;
+    width: 40%;
+    height: 90%;
+}
+
+#battle-text div {
+    padding: 20px;
+}
+
+#battle-text p {
+    font-size: 20px;
+}
+
+#turn {
+    float: right;
+    font-size: 14pt;
+}
+
+#messages {
+    padding-top: 40px;
+}
+
+#battle-actions {
+    text-align: center;
+}
+
+#battle-actions form {
+    height: 100%;
+    width: 300px;
+    margin: 0 auto;
+    padding-top: 25px;
+    max-height: 90%;
+}
+
+#battle-actions button {
+    padding: 10px 15px;
+    margin: 15px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: gainsboro;
+    font-family: 'Concert One';
+    font-size: 14pt;
+}
