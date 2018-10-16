@@ -2,34 +2,29 @@
     function action($type) {
         // Use probability to return character action
         $rand_int = rand(1, 100);
-        if (!($enemy_dead || $dead)) {
-            if($type == "enemy") {
-                switch ($rand_int) {
-                    case in_array($rand_int,range(1, 30)): 
-                        return "atk";
-                    case in_array($rand_int,range(31, 50)): 
-                        return "mgc";
-                    case in_array($rand_int,range(61, 80)):
-                        return "def";
-                    case in_array($rand_int,range(51, 60)):
-                        return "heal";
-                    default: 
-                        return "idle";
-                }
-            }
-            else if($type == "asst") {
-                switch ($rand_int) {
-                    case in_array($rand_int,range(1, 10)): 
-                        return "heal";
-                    case in_array($rand_int,range(11, 30)): 
-                        return "atk";
-                    default: 
-                        return "idle";
-                }
+        if($type == "enemy") {
+            switch ($rand_int) {
+                case in_array($rand_int,range(1, 30)): 
+                    return "atk";
+                case in_array($rand_int,range(31, 50)): 
+                    return "mgc";
+                case in_array($rand_int,range(61, 80)):
+                    return "def";
+                case in_array($rand_int,range(51, 60)):
+                    return "heal";
+                default: 
+                    return "idle";
             }
         }
-        else {
-            return "";
+        else if($type == "asst") {
+            switch ($rand_int) {
+                case in_array($rand_int,range(1, 10)): 
+                    return "heal";
+                case in_array($rand_int,range(11, 30)): 
+                    return "atk";
+                default: 
+                    return "idle";
+            }
         }
     }
     function print_action($actor, $action, $target = "", $damage = -1) {
@@ -69,6 +64,10 @@
             $output = $output." for ".strval($damage)." damage!";
         }
         return $output."<br />";
+    }
+    function checkDeath($int) {
+        if ($int <= 0)
+        return true;
     }
 
     // Game variables
@@ -130,47 +129,53 @@
             $health_enemy -= 3;
         }
     }
+    $dead = checkDeath($health);
+    $enemy_dead = checkDeath($health_enemy);
 
-    if ($act_enemy == "def" || $act_enemy == "idle") {
-        array_unshift($msgs, print_action($enemy, $act_enemy));
-    }
-    else if ($act_enemy == "heal") {
-        array_unshift($msgs, print_action($enemy, $act_enemy, "himself"));
-        $health_enemy++;
-    }
-    else if (($act_enemy == "atk" || $act_enemy == "mgc") && $act_user == "def") {
-        array_push($msgs, print_action($enemy, $act_enemy, $user, 0));
-    }
-    else if ($act_enemy == "atk" && $act_user != "def") {
-        array_push($msgs, print_action($enemy, $act_enemy, $user, 1));
-        $health--;
-    }
-    else if ($act_enemy == "mgc" && $act_user != "def") {
-        array_push($msgs, print_action($enemy, $act_enemy, $user, 3));
-        $health -= 3;
-    }
-
-    if ($act_asst == "idle") {
-        array_push($msgs, print_action($asst, $act_asst));
-    }
-    else if ($act_asst == "heal") {
-        array_push($msgs, print_action($asst, $act_asst, $user));
-        $health++;
-    }
-    else if ($act_asst == "atk" && $act_enemy == "def" && $act_user == "def") {
-        array_push($msgs, print_action($asst, $act_asst, $enemy, 0));
-    }
-    else if (($act_asst == "atk" && $act_enemy == "def" && $act_user != "def") || ($act_asst == "atk" && $act_enemy != "def")) {
-        array_push($msgs, print_action($asst, $act_asst, $enemy, 1));
-        $health_enemy--;
+    if (!($dead || $enemy_dead)) {
+        if ($act_enemy == "def" || $act_enemy == "idle") {
+            array_unshift($msgs, print_action($enemy, $act_enemy));
+        }
+        else if ($act_enemy == "heal") {
+            array_unshift($msgs, print_action($enemy, $act_enemy, "himself"));
+            $health_enemy++;
+        }
+        else if (($act_enemy == "atk" || $act_enemy == "mgc") && $act_user == "def") {
+            array_push($msgs, print_action($enemy, $act_enemy, $user, 0));
+        }
+        else if ($act_enemy == "atk" && $act_user != "def") {
+            array_push($msgs, print_action($enemy, $act_enemy, $user, 1));
+            $health--;
+        }
+        else if ($act_enemy == "mgc" && $act_user != "def") {
+            array_push($msgs, print_action($enemy, $act_enemy, $user, 3));
+            $health -= 3;
+        }
     }
 
-    if ($health_enemy <= 0) {
-        $enemy_dead = true;
+    $dead = checkDeath($health);
+    $enemy_dead = checkDeath($health_enemy);
+
+    if (!($dead || $enemy_dead)) {
+        if ($act_asst == "idle") {
+            array_push($msgs, print_action($asst, $act_asst));
+        }
+        else if ($act_asst == "heal") {
+            array_push($msgs, print_action($asst, $act_asst, $user));
+            $health++;
+        }
+        else if ($act_asst == "atk" && $act_enemy == "def" && $act_user == "def") {
+            array_push($msgs, print_action($asst, $act_asst, $enemy, 0));
+        }
+        else if (($act_asst == "atk" && $act_enemy == "def" && $act_user != "def") || ($act_asst == "atk" && $act_enemy != "def")) {
+            array_push($msgs, print_action($asst, $act_asst, $enemy, 1));
+            $health_enemy--;
+        }
     }
-    if ($health <= 0) {
-        $dead = true;
-    }
+
+    $dead = checkDeath($health);
+    $enemy_dead = checkDeath($health_enemy);
+
 ?>
 
 <!DOCTYPE html>
