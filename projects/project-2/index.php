@@ -30,7 +30,8 @@
         </div>
         <div>
             <h2>Name: </h2>
-            <input name="user" type="text" /><br>
+            <input name="user" type="text" required>
+            <br />
             <input type="submit" value="PLAY!">
         </div>            
     </form>
