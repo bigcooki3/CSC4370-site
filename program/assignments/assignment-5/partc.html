@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Part C</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            rel="shortcut icon"
+            type="image/png"
+            href="../../../assets/hamster.png"
+        />
+        <link
+            type="text/css"
+            media="screen"
+            rel="stylesheet"
+            href="./style.css"
+        />
+        <script src="partc.js" defer></script>
+    </head>
+
+    <body>
+        <div id="navbar">
+            <a id="home" href="../../../index.html"></a>
+            <h3 id="title">Assignment 5: Part C</h3>
+            <a id="back" href="index.html">Go Back to Links</a>
+        </div>
+        <div id="partc">
+            <div><h1>Memory Game</h1></div>
+            <div>
+                Each picture has a matching image -- try to remember where it
+                is. Click a card, then another in order to make a guess!
+            </div>
+            <div id="options" style="display: block;">
+                How many pictures?
+                <select id="numPics">
+                    <option value="8">8</option>
+                    <option value="10">10</option>
+                    <option value="12">12</option>
+                </select>
+                <br />
+                What difficulty (how long to memorize)?
+                <select id="numSecs">
+                    <option value="3">3 seconds</option>
+                    <option value="5">5 seconds</option>
+                    <option value="8">8 seconds</option>
+                </select>
+                <br />
+                <button onclick="start()" class="button-1">Play!</button>
+            </div>
+        </div>
+        <div id="table" style="display: none;">
+            <div>
+                <table>
+                    <tbody></tbody>
+                </table>
+                <p style="display: none;">
+                    <span id="timer"></span> seconds remaining
+                </p>
+            </div>
+            <div id="victory">
+                <p></p>
+                <a href="partc.html">Play again?</a>
+            </div>
+        </div>
+    </body>
+</html>

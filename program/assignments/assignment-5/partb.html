@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Part B</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            rel="shortcut icon"
+            type="image/png"
+            href="../../../assets/hamster.png"
+        />
+        <link
+            type="text/css"
+            media="screen"
+            rel="stylesheet"
+            href="./style.css"
+        />
+        <script src="partb.js" defer></script>
+    </head>
+
+    <body>
+        <div id="navbar">
+            <a id="home" href="../../../index.html"></a>
+            <h3 id="title">Assignment 5: Part B</h3>
+            <a id="back" href="index.html">Go Back to Links</a>
+        </div>
+        <div id="main">
+            <div><h1>Guessing Game</h1></div>
+            <div>
+                <p>Enter a number between 1-100:</p>
+                <input id="guess" type="number" min="1" max="100" />
+                <button class="button-1" onclick="guess()">Guess!</button>
+                <span id="hint"></span> <br />
+                <p><span id="guessCount">5</span> guesses remaining</p>
+                <p><span id="timer">20</span> seconds remaining</p>
+            </div>
+        </div>
+        <a id="next" class="button-1" href="partc.html">
+            Click here for the next part
+        </a>
+        <audio id="player" controls hidden autoplay>
+            <source src="partb.mp3" type="audio/mpeg" />
+        </audio>
+    </body>
+</html>
