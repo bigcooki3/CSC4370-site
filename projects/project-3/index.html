@@ -2,17 +2,80 @@
 <html>
 
 <head>
-    <title>Assignment 5</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Project 3</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/png" href="../../assets/hamster.png" />
     <link type="text/css" media="screen" rel="stylesheet" href="./style.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" defer></script>
     <script src="script.js" defer></script>
 </head>
 
 <body>
+    <div id="navbar">
+        <a id="home" href="http://codd.cs.gsu.edu/~phansa1/"></a>
+        <h3 id="title">Project 3</h3>
+    </div>
     <div id="main">
-
+        <div>
+            <h1>Conway's Game of Life</h1>
+        </div>
+        <div>
+            <h3>Game of Life Rules:</h3>
+            <ol>
+                <li>
+                    Any live cell with fewer than two live neighbors dies,
+                    as if by underpopulation.
+                </li>
+                <li>
+                    Any live cell with more than three live neighbors dies,
+                    as if by overcrowding.
+                </li>
+                <li>
+                    Any live cell with two or three live neighbors lives on to the next generation.
+                </li>
+                <li>
+                    Any dead cell with exactly three live neighbors becomes a live cell.
+                </li>
+            </ol>
+        </div>
+        <div>
+            <h4>Enter grid size:</h4>
+            <input id="gridSize" type="number" value="12" min="8" max="24" />
+            <button onclick="start()" class="btn">Make Grid</button>
+        </div>
+        <div>
+            <div class="toggle" style="display: none;">
+                <button class="btn" onclick="play()">Play</button>
+                <button class="btn" onclick="pause()">Pause</button>
+                <button class="btn" onclick="update()">Increment 1</button>
+                <button class="btn" onclick="update(23)">Increment 23</button>
+                <button class="btn" onclick="emptyArray()">Reset</button>
+            </div>
+            <br>
+            <div class="toggle" style="display: none;">
+                <button class="btn" onclick="printArray('box')">
+                    Box
+                </button>
+                <button class="btn" onclick="printArray('blinker')">
+                    Blinker
+                </button>
+                <button class="btn" onclick="printArray('beacon')">
+                    Beacon
+                </button>
+                <button class="btn" onclick="printArray('random')">
+                    Random
+                </button>
+            </div>
+            <br>
+            <h3 class="toggle" style="display: none;">Generation: <span id="gen"></span></h3>
+        </div>
+        <div id="boardDiv">
+            <table>
+                <tbody id="board"></tbody>
+            </table>
+        </div>
     </div>
 </body>
 
