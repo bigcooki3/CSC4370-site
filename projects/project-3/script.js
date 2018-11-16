@@ -87,7 +87,7 @@ function emptyArray() {
 function printArray(shape) {
     switch (shape) {
         case "box":
-            let topLefti = 1;
+            let topLefti = 0;
             let topLeftj = 1;
             for (let i = topLefti; i < topLefti + 2; i++) {
                 for (let j = topLeftj; j < topLeftj + 2; j++) {
@@ -104,6 +104,24 @@ function printArray(shape) {
             }
             break;
         case "beacon":
+            let topi = 4;
+            let topj = 0;
+            gridArray[topi][topj] = true;
+            coordToBoard(topi, topj);
+            gridArray[topi][topj + 1] = true;
+            coordToBoard(topi, topj + 1);
+            gridArray[topi + 1][topj] = true;
+            coordToBoard(topi + 1, topj);
+
+            let bottomi = 7;
+            let bottomj = 3;
+            gridArray[bottomi][bottomj] = true;
+            coordToBoard(bottomi, bottomj);
+            gridArray[bottomi - 1][bottomj] = true;
+            coordToBoard(bottomi - 1, bottomj);
+            gridArray[bottomi][bottomj - 1] = true;
+            coordToBoard(bottomi, bottomj - 1);
+
             break;
         default:
             generation = 0;
