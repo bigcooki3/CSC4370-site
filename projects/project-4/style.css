@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css?family=Work+Sans");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body {
+  margin-top: 56px;
+}
+
+body,
+input,
+button,
+select {
+  font-family: "Work Sans", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+}
+
+ol {
+  list-style-position: inside;
+}
+
+.container {
+  padding: 50px 0;
+}
+
+.row {
+  padding: 10px 0;
+}
+
+.nav-item {
+  padding: 0 8px;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+
+.agent {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  z-index: 9;
+  background: white;
+  padding: 10px;
+  animation: slideIn 2s;
+}
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+  from {bottom: -300px; opacity: 0} 
+  to {bottom: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+  from {bottom: -300px; opacity: 0}
+  to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
