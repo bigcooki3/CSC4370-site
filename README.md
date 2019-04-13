@@ -1,4 +1,4 @@
-# [CSC4370-site](https://biggestcookie.github.io/CSC4370-site/)
+# [CSWeb-site](https://biggestcookie.github.io/CSC4370-site/)
 A collection of web projects written for CS Web Programming, Fall 2018.
 Projects demonstrate a number of languages, frameworks and skills including:
 - W3C validated HTML5, XHTML and CSS3
