@@ -10,7 +10,7 @@ Notable pages:
 ## [Conway's Game of Life](https://biggestcookie.github.io/CSWeb-site/projects/project-3/index.html)
 An implementation of [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) using JavaScript and jQuery.
 
-## [PHPRPG](https://www.youtube.com/watch?v=7Ucg83x4Nvk)
+## [PHPRPG](https://phprpg.glitch.me/)
 A turnbased RPG implemented in PHP.
 
 ## [FaceBork](https://biggestcookie.github.io/CSWeb-site/projects/project-1/main.html)
